@@ -59,7 +59,7 @@ end;
 procedure TDM.DataModuleCreate(Sender: TObject);
 begin
     ConnBanco.Params.Clear;
-    ConnBanco.ConnectionName := 'PRINCIPAL';
+    ConnBanco.ConnectionDefName := 'PRINCIPAL';
     ConnBanco.Connected := True;
 end;
 
