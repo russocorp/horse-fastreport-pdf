@@ -217,16 +217,18 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="uLogArquivo.pas"/>
         <DCCReference Include="usvcServidorSite.pas">
             <Form>svcServidorSite</Form>
             <DesignClass>TService</DesignClass>
         </DCCReference>
         <DCCReference Include="uDM.pas">
             <Form>DM</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="uRotas.pas"/>
+        <DCCReference Include="Rotas\Rotas.Bancos.pas"/>
+        <DCCReference Include="uFuncoes.pas"/>
         <RcItem Include="relTeste.fr3">
             <ContainerId>ResourceItem</ContainerId>
             <ResourceType>IMPRESSAO</ResourceType>

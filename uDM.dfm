@@ -1,5 +1,6 @@
 object DM: TDM
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 339
   Width = 641
   object CDS: TClientDataSet
@@ -66,5 +67,46 @@ object DM: TDM
     BCDToCurrency = False
     Left = 328
     Top = 80
+  end
+  object ConnBanco: TFDConnection
+    Params.Strings = (
+      'Database=D:\Rafael\github\horse-fastreport-pdf\servidorsite.db'
+      'DriverID=SQLite')
+    FormatOptions.AssignedValues = [fvDefaultParamDataType]
+    ConnectedStoredUsage = [auDesignTime]
+    LoginPrompt = False
+    Left = 36
+    Top = 30
+  end
+  object qrAux: TFDQuery
+    Connection = ConnBanco
+    Left = 30
+    Top = 87
+  end
+  object qrBancos: TFDQuery
+    Connection = ConnBanco
+    SQL.Strings = (
+      'select *'
+      'from bancos')
+    Left = 54
+    Top = 207
+    object qrBancosid: TStringField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      FixedChar = True
+      Size = 3
+    end
+    object qrBancosnome: TStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 100
+    end
+    object qrBancoscnpj: TStringField
+      FieldName = 'cnpj'
+      Origin = 'cnpj'
+      Size = 30
+    end
   end
 end

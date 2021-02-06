@@ -12,9 +12,12 @@ uses
   Vcl.SvcMgr,
   MidasLib,
   System.SysUtils,
+  uLogArquivo in 'uLogArquivo.pas',
   usvcServidorSite in 'usvcServidorSite.pas' {svcServidorSite: TService},
   uDM in 'uDM.pas' {DM: TDataModule},
-  uRotas in 'uRotas.pas';
+  uRotas in 'uRotas.pas',
+  Rotas.Bancos in 'Rotas\Rotas.Bancos.pas',
+  uFuncoes in 'uFuncoes.pas';
 
 {$R *.RES}
 
