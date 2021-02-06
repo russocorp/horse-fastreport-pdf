@@ -19,10 +19,10 @@ type
         frxds_Mestre: TfrxDBDataset;
         ConnBanco: TFDConnection;
         qrAux: TFDQuery;
-    qrBancos: TFDQuery;
-    qrBancosid: TStringField;
-    qrBancosnome: TStringField;
-    qrBancoscnpj: TStringField;
+		qrBancos: TFDQuery;
+		qrBancosid: TStringField;
+		qrBancosnome: TStringField;
+		qrBancoscnpj: TStringField;
         procedure DataModuleCreate(Sender: TObject);
     private
         { Private declarations }
